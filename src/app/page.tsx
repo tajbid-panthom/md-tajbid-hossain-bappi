@@ -35,7 +35,7 @@ export default function HomePage() {
               src="/images/tajbid.jpeg"
               alt={siteConfig.name}
               fill
-              className="object-cover"
+              className="object-cover object-top"
               priority
               sizes="(max-width: 768px) 100vw, 400px"
             />
