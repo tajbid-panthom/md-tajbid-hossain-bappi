@@ -11,8 +11,18 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    id: "gonimia",
+    title: "Gonimia- Online Shopping Platform",
+    description:
+      "A full-scale online shopping platform for Bangladesh — multi-category e-commerce with grocery, fashion, electronics, and more. Features competitive pricing, secured payments, cash on delivery, and fast doorstep delivery.",
+    image: "/images/projects/gonimia.png",
+    url: "https://gonimia.com",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn/UI"],
+    featured: true,
+  },
+  {
     id: "donorlog",
-    title: "DonorLog",
+    title: "DonorLog- Fundraising Made Simple",
     description:
       "A comprehensive donor management platform for nonprofits to track donations, manage donor relationships, and generate insightful reports — built for real-world fundraising workflows.",
     image: "/images/projects/donorlog.png",
@@ -22,7 +32,7 @@ export const projects: Project[] = [
   },
   {
     id: "ulsai",
-    title: "ULSAI",
+    title: "ULSAI-Universal Languages and Skill Assessment Institute",
     description:
       "Corporate website for ULSAI — showcasing AI solutions, services, and company presence with a modern, responsive design tailored for the Bangladesh market.",
     image: "/images/projects/ulsai.png",
@@ -32,7 +42,7 @@ export const projects: Project[] = [
   },
   {
     id: "troyee",
-    title: "Troyee",
+    title: "TROYEE Associates - A Hub of Planners, Architects & Engineers",
     description:
       "A full-featured e-commerce and brand platform for Troyee — delivering product showcases, seamless browsing, and a polished shopping experience for customers in Bangladesh.",
     image: "/images/projects/troyee.png",
