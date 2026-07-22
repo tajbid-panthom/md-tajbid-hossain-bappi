@@ -8,15 +8,16 @@ import {
   ProjectGrid,
   ResponsibilityCards,
   SkillCards,
-  TestimonialCards,
 } from "@/components/sections";
+import { TestimonialSlider } from "@/components/testimonial-slider";
 import { Button } from "@/components/ui/button";
 import {
+  howIDo,
   projects,
-  responsibilities,
   siteConfig,
   skillCards,
   testimonials,
+  whatIDo,
 } from "@/data/site-data";
 
 export const metadata: Metadata = {
@@ -68,7 +69,7 @@ export default function HomePage() {
         <AnimateOnScroll>
           <SectionHeader
             title="Skills & Experience"
-            intro="Proficient in full-stack development with Next.js, React, and FastAPI. Skilled in creating responsive web interfaces, type-safe database layers with Drizzle ORM, and intuitive user experiences."
+            intro="Full-stack developer with production experience building e-commerce, SaaS, and corporate platforms. Skilled in Next.js, TypeScript, PostgreSQL, and Drizzle ORM — from polished frontends to scalable backend systems."
           />
         </AnimateOnScroll>
         <SkillCards cards={skillCards} />
@@ -84,18 +85,36 @@ export default function HomePage() {
         <ProjectGrid projects={featuredProjects} />
       </section>
 
-      <section className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
-        <AnimateOnScroll>
-          <SectionHeader title="What I do" />
-        </AnimateOnScroll>
-        <ResponsibilityCards cards={responsibilities} />
+      <section className="border-y border-white/5 bg-card/20 py-16 md:py-20">
+        <div className="mx-auto max-w-6xl px-5 md:px-8">
+          <AnimateOnScroll>
+            <SectionHeader
+              title="What I Do"
+              intro="I help businesses and organizations build digital products that work — from e-commerce stores and SaaS platforms to corporate websites and custom web applications."
+            />
+          </AnimateOnScroll>
+          <ResponsibilityCards cards={whatIDo} />
+        </div>
       </section>
 
       <section className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
         <AnimateOnScroll>
-          <SectionHeader title="Testimonial" />
+          <SectionHeader
+            title="How I Do It"
+            intro="A clear, collaborative process — I listen first, build with quality, and stay with you through launch and beyond."
+          />
         </AnimateOnScroll>
-        <TestimonialCards testimonials={testimonials} />
+        <ResponsibilityCards cards={howIDo} />
+      </section>
+
+      <section className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
+        <AnimateOnScroll>
+          <SectionHeader
+            title="Testimonials"
+            intro="What clients, professors, and collaborators say about working with me."
+          />
+        </AnimateOnScroll>
+        <TestimonialSlider testimonials={testimonials} />
       </section>
 
       <CtaSection />

@@ -112,100 +112,263 @@ export const skillCategories: SkillCategory[] = [
   {
     title: "Frontend Development",
     skills: [
-      { name: "HTML", percentage: 95 },
-      { name: "CSS", percentage: 90 },
+      { name: "Next.js", percentage: 92 },
+      { name: "React.js", percentage: 88 },
+      { name: "TypeScript", percentage: 90 },
+      { name: "Tailwind CSS", percentage: 92 },
+      { name: "Shadcn/UI", percentage: 88 },
+      { name: "HTML / CSS", percentage: 95 },
       { name: "JavaScript", percentage: 90 },
-      { name: "TypeScript", percentage: 85 },
-      { name: "React.js", percentage: 85 },
-      { name: "Next.js", percentage: 80 },
-      { name: "Tailwind CSS / Bootstrap", percentage: 85 },
-      { name: "Redux / State Management", percentage: 80 },
+      { name: "Redux", percentage: 78 },
     ],
   },
   {
     title: "Backend Development",
     skills: [
-      { name: "Node.js", percentage: 85 },
-      { name: "Express.js", percentage: 85 },
-      { name: "FastAPI", percentage: 80 },
-      { name: "REST API Development", percentage: 90 },
-      { name: "Authentication (JWT, OAuth)", percentage: 80 },
+      { name: "Node.js", percentage: 88 },
+      { name: "Express.js", percentage: 86 },
+      { name: "REST API Development", percentage: 92 },
+      { name: "Authentication & Authorization", percentage: 85 },
+      { name: "Payment & Checkout Workflows", percentage: 82 },
     ],
   },
   {
     title: "Database & Storage",
     skills: [
-      { name: "MySQL", percentage: 90 },
-      { name: "MongoDB", percentage: 80 },
-      { name: "PostgreSQL", percentage: 75 },
-      { name: "Drizzle ORM", percentage: 80 },
+      { name: "PostgreSQL", percentage: 88 },
+      { name: "Drizzle ORM", percentage: 88 },
+      { name: "MySQL", percentage: 88 },
+      { name: "MongoDB", percentage: 82 },
       { name: "Mongoose", percentage: 80 },
     ],
   },
   {
-    title: "Tools & Other",
+    title: "Tools & Domains",
     skills: [
-      { name: "Git & GitHub", percentage: 85 },
-      { name: "API Testing", percentage: 90 },
-      { name: "Machine Learning", percentage: 60 },
-      { name: "UI/UX Design (Basic Tools)", percentage: 70 },
+      { name: "Git & GitHub", percentage: 90 },
+      { name: "E-commerce Development", percentage: 90 },
+      { name: "SaaS & Dashboard Apps", percentage: 85 },
+      { name: "UI/UX Design", percentage: 78 },
+      { name: "Algorithm & Problem Solving", percentage: 82 },
     ],
   },
 ];
 
 export const skillCards = [
   {
-    title: "Frontend",
+    title: "Production Platforms",
     items: [
-      "Next.js, React.js, TypeScript, HTML5, CSS3, Tailwind CSS",
-      "Building responsive, dynamic user interfaces with modern component architecture",
-      "Shadcn/UI and state management for polished, scalable frontends",
+      "Built and shipped live products — Gonimia (e-commerce), DonorLog (nonprofit SaaS), ULSAI, Troyee, and ElectSumon",
+      "End-to-end delivery across UI, APIs, databases, payments, and real-world business workflows",
+      "Next.js, TypeScript, Tailwind CSS, and Shadcn/UI as the core production stack",
     ],
   },
   {
-    title: "Backend",
+    title: "Full-Stack Engineering",
     items: [
-      "Node.js, Express.js, FastAPI, MongoDB, MySQL, PostgreSQL, Drizzle ORM",
-      "Server-side logic, authentication, and database integration",
-      "RESTful APIs with MVC architecture and middleware patterns",
+      "PostgreSQL and Drizzle ORM for type-safe, scalable data layers in production apps",
+      "MERN stack (React, Node.js, Express, MongoDB) for social, LMS, and management systems",
+      "RESTful APIs, authentication, session handling, and server-side business logic",
     ],
   },
   {
-    title: "AI & Design",
+    title: "Domains & Problem Solving",
     items: [
-      "Machine learning fundamentals and applied AI workflows",
-      "Figma, Adobe XD — wireframing and prototyping",
-      "Clean, user-friendly designs with intuitive user journeys",
+      "E-commerce, nonprofit SaaS, corporate websites, e-learning, and club management systems",
+      "Algorithmic scheduling and optimization with the Routine Generator project",
+      "Clean, maintainable code with strong focus on performance, usability, and client needs",
     ],
   },
 ];
 
-export const responsibilities = [
+export type DesignProcessStep = {
+  step: number;
+  title: string;
+  description: string;
+  deliverables: string[];
+};
+
+export const aboutProfile = {
+  headline: "Building digital products that solve real problems",
+  bio: "I'm a full-stack web developer based in Bangladesh, focused on turning ideas into production-ready platforms. From multi-category e-commerce and nonprofit SaaS to corporate websites and custom web apps, I deliver end-to-end solutions — strategy, design, development, and launch.",
+  highlights: [
+    { label: "Production Apps", value: "6+" },
+    { label: "Years Experience", value: "3+" },
+    { label: "Tech Stack", value: "Next.js" },
+    { label: "Clients Served", value: "10+" },
+  ],
+};
+
+export const designProcess: DesignProcessStep[] = [
   {
-    title: "Frontend\nResponsibilities",
-    items: [
-      "Design and build user interfaces with React, Next.js, and TypeScript",
-      "Ensure responsive and interactive designs across all devices",
-      "Work with APIs to fetch and display data dynamically",
+    step: 1,
+    title: "Discovery & Research",
+    description:
+      "Every project starts with understanding your goals, audience, and constraints. I gather requirements, study competitors, and define a clear scope before writing a single line of code.",
+    deliverables: ["Project brief", "User personas", "Feature roadmap"],
+  },
+  {
+    step: 2,
+    title: "Strategy & Wireframing",
+    description:
+      "I map out information architecture, user flows, and page structure. Low-fidelity wireframes ensure the layout and navigation make sense before moving into visual design.",
+    deliverables: ["Site map", "User flow diagrams", "Wireframes"],
+  },
+  {
+    step: 3,
+    title: "UI Design & Prototyping",
+    description:
+      "With structure in place, I craft a polished visual system — typography, color, spacing, and components. Interactive prototypes let you preview the experience early.",
+    deliverables: ["Design system", "High-fidelity mockups", "Clickable prototype"],
+  },
+  {
+    step: 4,
+    title: "Development & Integration",
+    description:
+      "Design becomes a fully functional product. I build responsive frontends, robust APIs, and database layers — integrating payments, auth, and third-party services as needed.",
+    deliverables: ["Frontend & backend code", "API integration", "Database setup"],
+  },
+  {
+    step: 5,
+    title: "Testing & Launch",
+    description:
+      "Before go-live, I run thorough QA across devices and browsers, optimize performance, and handle deployment. You get a stable, production-ready product.",
+    deliverables: ["Cross-browser testing", "Performance audit", "Deployment"],
+  },
+  {
+    step: 6,
+    title: "Support & Iteration",
+    description:
+      "Launch is just the beginning. I provide post-launch support, monitor feedback, and iterate on features to keep your product growing with your business.",
+    deliverables: ["Bug fixes", "Feature updates", "Ongoing maintenance"],
+  },
+];
+
+export type Service = {
+  title: string;
+  description: string;
+  features: string[];
+};
+
+export const services: Service[] = [
+  {
+    title: "Web Application Development",
+    description:
+      "Custom full-stack web apps built with Next.js, TypeScript, and modern tooling — from dashboards and SaaS platforms to internal tools.",
+    features: [
+      "Next.js & React with TypeScript",
+      "RESTful APIs and server actions",
+      "PostgreSQL, MongoDB, or MySQL",
     ],
   },
   {
-    title: "Backend\nResponsibilities",
-    items: [
-      "Develop server-side logic using Node.js and FastAPI",
-      "Design and manage databases with Drizzle ORM, MongoDB, and MySQL",
-      "Create and secure RESTful APIs, handle authentication, and manage user sessions",
+    title: "E-commerce Solutions",
+    description:
+      "Scalable online stores with product catalogs, cart flows, payment integration, and order management — proven on platforms like Gonimia and Troyee.",
+    features: [
+      "Multi-category product management",
+      "Payment gateway integration",
+      "Admin panel & inventory tools",
     ],
   },
   {
-    title: "UI/UX Design\nResponsibilities",
-    items: [
-      "Understand user needs, behaviors, and pain points through research and usability testing",
-      "Create wireframes, mock-ups, and interactive prototypes to visualize user journeys",
-      "Develop visually appealing, user-friendly designs that enhance usability",
+    title: "Corporate & Brand Websites",
+    description:
+      "Professional, responsive websites that establish credibility and convert visitors — tailored for businesses, institutes, and organizations.",
+    features: [
+      "Modern UI with Tailwind & Shadcn/UI",
+      "SEO-friendly architecture",
+      "Fast, mobile-first performance",
+    ],
+  },
+  {
+    title: "UI/UX Design & Prototyping",
+    description:
+      "User-centered design from wireframes to polished interfaces. I create intuitive layouts and interactive prototypes that guide development.",
+    features: [
+      "Wireframing & user flow mapping",
+      "Visual design & component systems",
+      "Figma prototypes & design handoff",
+    ],
+  },
+  {
+    title: "API & Backend Development",
+    description:
+      "Reliable server-side systems with authentication, role-based access, and data modeling — built to scale with your product.",
+    features: [
+      "Node.js & Express backends",
+      "Drizzle ORM & type-safe queries",
+      "JWT auth & session management",
+    ],
+  },
+  {
+    title: "Maintenance & Optimization",
+    description:
+      "Keep your product running smoothly with performance tuning, security updates, feature enhancements, and ongoing technical support.",
+    features: [
+      "Performance & SEO optimization",
+      "Bug fixes & security patches",
+      "Feature additions & refactoring",
     ],
   },
 ];
+
+export const whatIDo = [
+  {
+    title: "E-commerce &\nSaaS Platforms",
+    items: [
+      "Multi-category online stores with payments, cart, and order management",
+      "Donor management, dashboards, and nonprofit workflow systems",
+      "Admin panels, role-based access, and real-time data reporting",
+    ],
+  },
+  {
+    title: "Corporate &\nBrand Websites",
+    items: [
+      "Professional business websites that build trust and drive conversions",
+      "Modern, mobile-first designs tailored for the Bangladesh market",
+      "SEO-ready architecture with fast load times and clean structure",
+    ],
+  },
+  {
+    title: "Custom Web\nApplications",
+    items: [
+      "Full-stack apps with Next.js, TypeScript, and PostgreSQL",
+      "Social platforms, LMS systems, and internal management tools",
+      "API integrations, authentication, and third-party service connections",
+    ],
+  },
+];
+
+export const howIDo = [
+  {
+    title: "Listen &\nPlan",
+    items: [
+      "Start with a discovery call to understand your goals and audience",
+      "Define scope, timeline, and milestones before development begins",
+      "Share wireframes and prototypes for early feedback and alignment",
+    ],
+  },
+  {
+    title: "Build &\nIterate",
+    items: [
+      "Develop in focused sprints with regular progress updates",
+      "Write clean, type-safe code with reusable component architecture",
+      "Test across devices and browsers at every stage of the build",
+    ],
+  },
+  {
+    title: "Launch &\nSupport",
+    items: [
+      "Handle deployment, performance optimization, and go-live checklist",
+      "Provide documentation and handoff for your team",
+      "Offer post-launch support, bug fixes, and feature enhancements",
+    ],
+  },
+];
+
+/** @deprecated Use whatIDo or howIDo instead */
+export const responsibilities = whatIDo;
 
 export const testimonials = [
   {
@@ -268,7 +431,7 @@ export const siteConfig = {
   whatsapp: "https://wa.me/8801738166031",
   location: "Khulna University, Khulna",
   description:
-    "Specialized in building full-stack web applications with Next.js, React, Node.js, and FastAPI. Skilled in both frontend and backend development with strong TypeScript and database expertise. Experienced in creating dynamic, responsive interfaces and robust server-side functionality with a focus on clean UI/UX.",
+    "Full-stack web developer specializing in Next.js, TypeScript, and PostgreSQL. I build production-grade e-commerce platforms, SaaS products, and corporate websites — from design and development to deployment.",
   footerDescription:
-    "I'm a Full Stack Developer passionate about building scalable and efficient web applications. Skilled in Next.js, FastAPI, Drizzle ORM, and modern frontend technologies with a strong focus on clean UI/UX. Always eager to learn, collaborate, and turn ideas into functional digital experiences.",
+    "Full-stack developer passionate about building scalable web applications. Skilled in Next.js, TypeScript, Drizzle ORM, and modern frontend technologies with a strong focus on clean UI/UX. Always eager to collaborate and turn ideas into functional digital experiences.",
 };
