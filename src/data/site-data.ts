@@ -17,7 +17,7 @@ export const projects: Project[] = [
       "A full-scale online shopping platform for Bangladesh — multi-category e-commerce with grocery, fashion, electronics, and more. Features competitive pricing, secured payments, cash on delivery, and fast doorstep delivery.",
     image: "/images/projects/gonimia.png",
     url: "https://gonimia.com",
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn/UI"],
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn/UI", "Drizzle ORM", "PostgreSQL"],
     featured: true,
   },
   {
@@ -27,7 +27,7 @@ export const projects: Project[] = [
       "A comprehensive donor management platform for nonprofits to track donations, manage donor relationships, and generate insightful reports — built for real-world fundraising workflows.",
     image: "/images/projects/donorlog.png",
     url: "https://donorlog.com",
-    techStack: ["Next.js", "TypeScript", "Drizzle ORM", "Tailwind CSS", "Shadcn/UI"],
+    techStack: ["Next.js", "TypeScript", "Drizzle ORM", "Tailwind CSS", "Shadcn/UI", "PostgreSQL"],
     featured: true,
   },
   {
@@ -37,7 +37,7 @@ export const projects: Project[] = [
       "Corporate website for ULSAI — showcasing AI solutions, services, and company presence with a modern, responsive design tailored for the Bangladesh market.",
     image: "/images/projects/ulsai.png",
     url: "https://ulsai.com.bd",
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn/UI"],
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn/UI", "PostgreSQL", "Drizzle ORM"],
     featured: true,
   },
   {
@@ -48,6 +48,16 @@ export const projects: Project[] = [
     image: "/images/projects/troyee.png",
     url: "https://troyee.com.bd",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn/UI"],
+    featured: true,
+  },
+  {
+    id: "elect-sumon",
+    title: "ElectSumon - Fazle Reza Sumon for BIP President",
+    description:
+      "১৭ তম নির্বাহী পরিষদ নির্বাচনে সভাপতি পদে আপনাদের সমর্থন এবং সহযোগিতা প্রত্যাশী",
+    image: "/images/projects/elect-sumon.png",
+    url: "https://www.electsumon.com/",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
     featured: true,
   },
   {
