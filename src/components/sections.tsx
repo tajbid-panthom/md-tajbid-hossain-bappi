@@ -6,7 +6,7 @@ import { useState } from "react";
 import { ExternalLink } from "lucide-react";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
 import { Card, CardContent } from "@/components/ui/card";
-import type { Project } from "@/data/site-data";
+import type { Education, Experience, Project } from "@/data/site-data";
 
 function ProjectImage({ project }: { project: Project }) {
   const [hasError, setHasError] = useState(false);
@@ -121,6 +121,108 @@ export function ProjectDetailList({ projects }: { projects: Project[] }) {
               )}
             </div>
           </div>
+        </AnimateOnScroll>
+      ))}
+    </div>
+  );
+}
+
+export function ExperienceList({ experiences }: { experiences: Experience[] }) {
+  return (
+    <div className="relative space-y-8 before:absolute before:left-[11px] before:top-3 before:hidden before:h-[calc(100%-1.5rem)] before:w-px before:bg-accent/20 md:before:block">
+      {experiences.map((job, index) => (
+        <AnimateOnScroll key={`${job.company}-${job.role}`} delay={index * 100}>
+          <article className="relative md:pl-10">
+            <span
+              aria-hidden
+              className="absolute left-0 top-2 hidden h-6 w-6 items-center justify-center rounded-full border-2 border-accent/40 bg-background md:flex"
+            >
+              <span className="h-2 w-2 rounded-full bg-accent" />
+            </span>
+            <Card className="border-white/5 bg-card/60">
+              <CardContent className="p-6 md:p-8">
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
+                  <div>
+                    <h3 className="text-xl font-bold text-primary">{job.company}</h3>
+                    <p className="mt-1 font-medium text-accent">{job.role}</p>
+                  </div>
+                  <p className="shrink-0 text-sm text-muted-foreground sm:pt-1">
+                    {job.period}
+                  </p>
+                </div>
+                <p className="mt-4 leading-relaxed text-muted-foreground">
+                  {job.summary}
+                </p>
+                <ul className="mt-5 space-y-3">
+                  {job.highlights.map((item) => (
+                    <li
+                      key={item}
+                      className="flex gap-2 text-sm leading-relaxed text-muted-foreground before:mt-2 before:h-1.5 before:w-1.5 before:shrink-0 before:rounded-full before:bg-accent"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                {job.urls && job.urls.length > 0 && (
+                  <div className="mt-5 flex flex-wrap gap-3">
+                    {job.urls.map((link) => (
+                      <a
+                        key={link.href}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-sm font-medium text-accent underline-offset-2 hover:underline"
+                      >
+                        {link.label}
+                        <ExternalLink className="h-3.5 w-3.5" />
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </CardContent>
+            </Card>
+          </article>
+        </AnimateOnScroll>
+      ))}
+    </div>
+  );
+}
+
+export function EducationList({ education }: { education: Education[] }) {
+  return (
+    <div className="space-y-6">
+      {education.map((item, index) => (
+        <AnimateOnScroll key={`${item.institution}-${item.degree}`} delay={index * 100}>
+          <Card className="border-white/5 bg-card/60">
+            <CardContent className="p-6 md:p-8">
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
+                <div>
+                  <h3 className="text-xl font-bold text-primary">
+                    {item.institution}
+                    <span className="font-normal text-muted-foreground">
+                      , {item.location}
+                    </span>
+                  </h3>
+                  <p className="mt-1 font-medium text-accent">{item.degree}</p>
+                </div>
+                <p className="shrink-0 text-sm text-muted-foreground sm:pt-1">
+                  {item.period}
+                </p>
+              </div>
+              {item.details && item.details.length > 0 && (
+                <ul className="mt-5 space-y-2">
+                  {item.details.map((detail) => (
+                    <li
+                      key={detail}
+                      className="flex gap-2 text-sm leading-relaxed text-muted-foreground before:mt-2 before:h-1.5 before:w-1.5 before:shrink-0 before:rounded-full before:bg-accent"
+                    >
+                      {detail}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </CardContent>
+          </Card>
         </AnimateOnScroll>
       ))}
     </div>

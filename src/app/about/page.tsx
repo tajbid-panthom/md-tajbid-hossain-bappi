@@ -5,10 +5,12 @@ import { CtaSection } from "@/components/cta-section";
 import { DesignProcess } from "@/components/design-process";
 import { SectionHeader } from "@/components/section-header";
 import { SkillBar } from "@/components/skill-bar";
-import { SkillCards } from "@/components/sections";
+import { EducationList, ExperienceList, SkillCards } from "@/components/sections";
 import {
   aboutProfile,
   designProcess,
+  education,
+  experiences,
   siteConfig,
   skillCards,
   skillCategories,
@@ -49,6 +51,17 @@ export default function AboutPage() {
               <p className="mt-6 leading-relaxed text-muted-foreground">
                 {aboutProfile.bio}
               </p>
+              <p className="mt-4 text-sm text-muted-foreground">
+                Business:{" "}
+                <a
+                  href={siteConfig.businessWebsite}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-accent underline-offset-2 hover:underline"
+                >
+                  {siteConfig.business} — gonimia.com
+                </a>
+              </p>
               <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
                 {aboutProfile.highlights.map((item) => (
                   <div
@@ -65,53 +78,77 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Skills & Experience */}
+      {/* Work Experience */}
+      <section className="border-y border-white/5 bg-card/20 py-16 md:py-20">
+        <div className="mx-auto max-w-6xl px-5 md:px-8">
+          <AnimateOnScroll>
+            <SectionHeader
+              title="Experience"
+              intro="Professional roles and ventures — founding Gonimia, shipping CRA-compliant donor management at GlaceIT, and building education and corporate systems at Troyee Associates."
+            />
+          </AnimateOnScroll>
+          <ExperienceList experiences={experiences} />
+        </div>
+      </section>
+
+      {/* Education */}
       <section className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-20">
         <AnimateOnScroll>
           <SectionHeader
-            title="Skills & Experience"
-            intro="Experienced full-stack developer who has shipped production platforms for e-commerce, nonprofit SaaS, and corporate clients. Proficient in Next.js, TypeScript, PostgreSQL, and Drizzle ORM."
+            title="Education"
+            intro="Academic foundation in computer science, building the skills behind the products I ship."
           />
         </AnimateOnScroll>
+        <EducationList education={education} />
+      </section>
 
-        <div className="space-y-14">
-          {skillCategories.map((category, categoryIndex) => (
-            <AnimateOnScroll key={category.title} delay={categoryIndex * 50}>
-              <div>
-                <h3 className="mb-6 text-xl font-bold text-accent md:text-2xl">
-                  {category.title}
-                </h3>
-                <div className="grid gap-5 sm:grid-cols-2">
-                  {category.skills.map((skill, skillIndex) => (
-                    <SkillBar
-                      key={skill.name}
-                      name={skill.name}
-                      percentage={skill.percentage}
-                      delay={skillIndex * 80}
-                    />
-                  ))}
+      {/* Skills */}
+      <section className="border-y border-white/5 bg-card/20 py-16 md:py-20">
+        <div className="mx-auto max-w-6xl px-5 md:px-8">
+          <AnimateOnScroll>
+            <SectionHeader
+              title="Skills"
+              intro="Experienced full-stack developer who has shipped production platforms for e-commerce, nonprofit SaaS, and corporate clients. Proficient in Next.js, TypeScript, PostgreSQL, and Drizzle ORM."
+            />
+          </AnimateOnScroll>
+
+          <div className="space-y-14">
+            {skillCategories.map((category, categoryIndex) => (
+              <AnimateOnScroll key={category.title} delay={categoryIndex * 50}>
+                <div>
+                  <h3 className="mb-6 text-xl font-bold text-accent md:text-2xl">
+                    {category.title}
+                  </h3>
+                  <div className="grid gap-5 sm:grid-cols-2">
+                    {category.skills.map((skill, skillIndex) => (
+                      <SkillBar
+                        key={skill.name}
+                        name={skill.name}
+                        percentage={skill.percentage}
+                        delay={skillIndex * 80}
+                      />
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </AnimateOnScroll>
-          ))}
-        </div>
+              </AnimateOnScroll>
+            ))}
+          </div>
 
-        <div className="mt-20">
-          <SkillCards cards={skillCards} />
+          <div className="mt-20">
+            <SkillCards cards={skillCards} />
+          </div>
         </div>
       </section>
 
       {/* Design Process */}
-      <section className="border-y border-white/5 bg-card/20 py-16 md:py-24">
-        <div className="mx-auto max-w-6xl px-5 md:px-8">
-          <AnimateOnScroll>
-            <SectionHeader
-              title="Design & Development Process"
-              intro="A structured, collaborative approach — from initial discovery to launch and beyond. Steps advance automatically as you scroll through the workflow."
-            />
-          </AnimateOnScroll>
-          <DesignProcess steps={designProcess} />
-        </div>
+      <section className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
+        <AnimateOnScroll>
+          <SectionHeader
+            title="Design & Development Process"
+            intro="A structured, collaborative approach — from initial discovery to launch and beyond. Steps advance automatically as you scroll through the workflow."
+          />
+        </AnimateOnScroll>
+        <DesignProcess steps={designProcess} />
       </section>
 
       <CtaSection />

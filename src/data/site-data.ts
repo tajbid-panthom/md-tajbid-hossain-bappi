@@ -14,7 +14,7 @@ export const projects: Project[] = [
     id: "gonimia",
     title: "Gonimia- Online Shopping Platform",
     description:
-      "A full-scale online shopping platform for Bangladesh — multi-category e-commerce with grocery, fashion, electronics, and more. Features competitive pricing, secured payments, cash on delivery, and fast doorstep delivery.",
+      "My e-commerce business — a full-scale online shopping platform for Bangladesh with multi-category catalogs, secured payments, cash on delivery, and fast doorstep delivery.",
     image: "/images/projects/gonimia.png",
     url: "https://gonimia.com",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn/UI", "Drizzle ORM", "PostgreSQL"],
@@ -24,7 +24,7 @@ export const projects: Project[] = [
     id: "donorlog",
     title: "DonorLog- Fundraising Made Simple",
     description:
-      "A comprehensive donor management platform for nonprofits to track donations, manage donor relationships, and generate insightful reports — built for real-world fundraising workflows.",
+      "A full-stack platform for nonprofits to track donations, manage donor relationships, and automate CRA-compliant tax receipts — built for real-world fundraising workflows.",
     image: "/images/projects/donorlog.png",
     url: "https://donorlog.com",
     techStack: ["Next.js", "TypeScript", "Drizzle ORM", "Tailwind CSS", "Shadcn/UI", "PostgreSQL"],
@@ -34,7 +34,7 @@ export const projects: Project[] = [
     id: "ulsai",
     title: "ULSAI-Universal Languages and Skill Assessment Institute",
     description:
-      "Corporate website for ULSAI — showcasing AI solutions, services, and company presence with a modern, responsive design tailored for the Bangladesh market.",
+      "A comprehensive platform for Japanese language course registration, user management, and administrative operations — built for ULSAI in Bangladesh.",
     image: "/images/projects/ulsai.png",
     url: "https://ulsai.com.bd",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn/UI", "PostgreSQL", "Drizzle ORM"],
@@ -44,7 +44,7 @@ export const projects: Project[] = [
     id: "troyee",
     title: "TROYEE Associates - A Hub of Planners, Architects & Engineers",
     description:
-      "A full-featured e-commerce and brand platform for Troyee — delivering product showcases, seamless browsing, and a polished shopping experience for customers in Bangladesh.",
+      "The official website of Troyee Associates — a hub for planners, architects, and engineers — designed for performance, usability, and scalability.",
     image: "/images/projects/troyee.png",
     url: "https://troyee.com.bd",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn/UI"],
@@ -158,7 +158,7 @@ export const skillCards = [
   {
     title: "Production Platforms",
     items: [
-      "Built and shipped live products — Gonimia (e-commerce), DonorLog (nonprofit SaaS), ULSAI, Troyee, and ElectSumon",
+      "Founded Gonimia (gonimia.com) and shipped live products — DonorLog (nonprofit SaaS), ULSAI, Troyee, and ElectSumon",
       "End-to-end delivery across UI, APIs, databases, payments, and real-world business workflows",
       "Next.js, TypeScript, Tailwind CSS, and Shadcn/UI as the core production stack",
     ],
@@ -190,7 +190,7 @@ export type DesignProcessStep = {
 
 export const aboutProfile = {
   headline: "Building digital products that solve real problems",
-  bio: "I'm a full-stack web developer based in Bangladesh, focused on turning ideas into production-ready platforms. From multi-category e-commerce and nonprofit SaaS to corporate websites and custom web apps, I deliver end-to-end solutions — strategy, design, development, and launch.",
+  bio: "I'm a full-stack web developer based in Bangladesh and the founder of Gonimia (gonimia.com), an online shopping platform. I turn ideas into production-ready products — from e-commerce and nonprofit SaaS to corporate websites and custom web apps.",
   highlights: [
     { label: "Production Apps", value: "6+" },
     { label: "Years Experience", value: "3+" },
@@ -198,6 +198,79 @@ export const aboutProfile = {
     { label: "Clients Served", value: "10+" },
   ],
 };
+
+export type Experience = {
+  company: string;
+  role: string;
+  period: string;
+  summary: string;
+  highlights: string[];
+  urls?: { label: string; href: string }[];
+};
+
+export const experiences: Experience[] = [
+  {
+    company: "Gonimia",
+    role: "Founder",
+    period: "Ongoing",
+    summary:
+      "Founded and built Gonimia (gonimia.com), a multi-category online shopping platform serving customers across Bangladesh.",
+    highlights: [
+      "Designed and developed the full-stack e-commerce platform with product catalogs, cart flows, payments, and order management.",
+      "Built with Next.js, TypeScript, Tailwind CSS, Shadcn/UI, Drizzle ORM, and PostgreSQL for a scalable production stack.",
+      "Own and operate the business end to end — from product and engineering to growth and customer experience.",
+    ],
+    urls: [{ label: "gonimia.com", href: "https://gonimia.com" }],
+  },
+  {
+    company: "GlaceIT",
+    role: "Junior Software Engineer",
+    period: "January 2025 – December 2025",
+    summary:
+      "Contributed to DonorLog (donorlog.com), a full-stack platform for tracking donations, managing donor relationships, and automating CRA-compliant tax receipts.",
+    highlights: [
+      "Built and optimized responsive user interfaces using Next.js and Tailwind CSS, improving the platform's overall user experience.",
+      "Developed backend services with Node.js and integrated database operations using Drizzle ORM and PostgreSQL to securely handle donor data.",
+      "Collaborated with the development team to build features ensuring strict compliance with Canadian Revenue Agency (CRA) standards for automated receipt generation.",
+      "Tested, debugged, and optimized front-end and back-end performance.",
+    ],
+    urls: [{ label: "donorlog.com", href: "https://donorlog.com" }],
+  },
+  {
+    company: "Troyee Associates",
+    role: "Junior IT Officer",
+    period: "Ongoing",
+    summary:
+      "Developed and maintained platforms for Japanese language course registration, brand presence, and day-to-day administrative operations.",
+    highlights: [
+      "Developed and maintained the ULSAI platform (ulsai.com.bd) for Japanese language course registration, user management, and related administrative operations.",
+      "Designed, developed, and managed the official website of Troyee (troyee.com.bd), ensuring optimal performance, usability, and scalability.",
+      "Handled ongoing website maintenance, updates, and technical support to ensure smooth system functionality.",
+    ],
+    urls: [
+      { label: "ulsai.com.bd", href: "https://ulsai.com.bd" },
+      { label: "troyee.com.bd", href: "https://troyee.com.bd" },
+    ],
+  },
+];
+
+export type Education = {
+  institution: string;
+  location: string;
+  degree: string;
+  period: string;
+  details?: string[];
+};
+
+export const education: Education[] = [
+  {
+    institution: "Khulna University",
+    location: "Khulna",
+    degree: "B.Sc. in Computer Science & Engineering",
+    period: "August 2023 – July 2027 (Ongoing)",
+    details: ["CGPA: 3.84"],
+  },
+];
 
 export const designProcess: DesignProcessStep[] = [
   {
@@ -430,8 +503,10 @@ export const siteConfig = {
   phone: "+8801738166031",
   whatsapp: "https://wa.me/8801738166031",
   location: "Khulna University, Khulna",
+  business: "Gonimia",
+  businessWebsite: "https://gonimia.com",
   description:
-    "Full-stack web developer specializing in Next.js, TypeScript, and PostgreSQL. I build production-grade e-commerce platforms, SaaS products, and corporate websites — from design and development to deployment.",
+    "Full-stack web developer and founder of Gonimia (gonimia.com). I specialize in Next.js, TypeScript, and PostgreSQL — building production-grade e-commerce platforms, SaaS products, and corporate websites.",
   footerDescription:
-    "Full-stack developer passionate about building scalable web applications. Skilled in Next.js, TypeScript, Drizzle ORM, and modern frontend technologies with a strong focus on clean UI/UX. Always eager to collaborate and turn ideas into functional digital experiences.",
+    "Full-stack developer and founder of Gonimia. Passionate about building scalable web applications with Next.js, TypeScript, Drizzle ORM, and modern frontend technologies — always eager to collaborate and turn ideas into functional digital experiences.",
 };

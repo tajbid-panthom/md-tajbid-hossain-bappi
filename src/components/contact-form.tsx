@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, MapPin, MessageCircle } from "lucide-react";
+import { ExternalLink, Mail, MapPin, MessageCircle } from "lucide-react";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -86,7 +86,7 @@ export function ContactForm() {
         </form>
       </AnimateOnScroll>
 
-      <div className="mt-12 grid gap-4 sm:grid-cols-3">
+      <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <AnimateOnScroll delay={100}>
           <a
             href={`mailto:${siteConfig.email}`}
@@ -96,7 +96,7 @@ export function ContactForm() {
             <span className="text-sm text-primary">{siteConfig.email}</span>
           </a>
         </AnimateOnScroll>
-        <AnimateOnScroll delay={200}>
+        <AnimateOnScroll delay={150}>
           <a
             href={siteConfig.whatsapp}
             target="_blank"
@@ -107,7 +107,19 @@ export function ContactForm() {
             <span className="text-sm text-primary">{siteConfig.phone}</span>
           </a>
         </AnimateOnScroll>
-        <AnimateOnScroll delay={300}>
+        <AnimateOnScroll delay={200}>
+          <a
+            href={siteConfig.businessWebsite}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center gap-3 rounded-xl border border-white/5 bg-card/50 p-6 text-center transition-colors hover:border-accent/30"
+          >
+            <ExternalLink className="h-6 w-6 text-accent" />
+            <span className="text-sm text-primary">{siteConfig.business}</span>
+            <span className="text-xs text-muted-foreground">gonimia.com</span>
+          </a>
+        </AnimateOnScroll>
+        <AnimateOnScroll delay={250}>
           <div className="flex flex-col items-center gap-3 rounded-xl border border-white/5 bg-card/50 p-6 text-center">
             <MapPin className="h-6 w-6 text-accent" />
             <span className="text-sm text-primary">{siteConfig.location}</span>
