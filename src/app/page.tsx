@@ -20,7 +20,8 @@ import {
 } from "@/data/site-data";
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: "Md Tajbid Hossain Bappi | Portfolio",
+  description: "A portfolio showcasing the work and skills of Md Tajbid Hossain Bappi.",
 };
 
 export default function HomePage() {
