@@ -13,7 +13,7 @@ function ProjectImage({ project }: { project: Project }) {
 
   if (hasError) {
     return (
-      <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#4f064f]/90 to-[#190019] p-6">
+      <div className="flex h-full w-full items-center justify-center bg-linear-to-br from-[#4f064f]/90 to-background p-6">
         <span className="text-center text-xl font-bold text-primary">{project.title}</span>
       </div>
     );
@@ -129,7 +129,7 @@ export function ProjectDetailList({ projects }: { projects: Project[] }) {
 
 export function ExperienceList({ experiences }: { experiences: Experience[] }) {
   return (
-    <div className="relative space-y-8 before:absolute before:left-[11px] before:top-3 before:hidden before:h-[calc(100%-1.5rem)] before:w-px before:bg-accent/20 md:before:block">
+    <div className="relative space-y-8 before:absolute before:left-2.75 before:top-3 before:hidden before:h-[calc(100%-1.5rem)] before:w-px before:bg-accent/20 md:before:block">
       {experiences.map((job, index) => (
         <AnimateOnScroll key={`${job.company}-${job.role}`} delay={index * 100}>
           <article className="relative md:pl-10">

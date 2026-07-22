@@ -54,7 +54,7 @@ export const projects: Project[] = [
     id: "elect-sumon",
     title: "ElectSumon - Fazle Reza Sumon for BIP President",
     description:
-      "১৭ তম নির্বাহী পরিষদ নির্বাচনে সভাপতি পদে আপনাদের সমর্থন এবং সহযোগিতা প্রত্যাশী",
+      "Campaign website for Fazle Reza Sumon — built as part of Troyee Associates' digital work. ১৭ তম নির্বাহী পরিষদ নির্বাচনে সভাপতি পদে আপনাদের সমর্থন এবং সহযোগিতা প্রত্যাশী",
     image: "/images/projects/elect-sumon.png",
     url: "https://www.electsumon.com/",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
@@ -238,18 +238,20 @@ export const experiences: Experience[] = [
   },
   {
     company: "Troyee Associates",
-    role: "Junior IT Officer",
+    role: "IT Officer",
     period: "Ongoing",
     summary:
-      "Developed and maintained platforms for Japanese language course registration, brand presence, and day-to-day administrative operations.",
+      "Develop and maintain digital platforms for Troyee Associates — including the company website, ULSAI course systems, and the ElectSumon campaign site — along with ongoing IT support.",
     highlights: [
       "Developed and maintained the ULSAI platform (ulsai.com.bd) for Japanese language course registration, user management, and related administrative operations.",
       "Designed, developed, and managed the official website of Troyee (troyee.com.bd), ensuring optimal performance, usability, and scalability.",
+      "Built and manage ElectSumon (electsumon.com), the campaign website for Fazle Reza Sumon, as part of Troyee Associates' digital work.",
       "Handled ongoing website maintenance, updates, and technical support to ensure smooth system functionality.",
     ],
     urls: [
-      { label: "ulsai.com.bd", href: "https://ulsai.com.bd" },
       { label: "troyee.com.bd", href: "https://troyee.com.bd" },
+      { label: "ulsai.com.bd", href: "https://ulsai.com.bd" },
+      { label: "electsumon.com", href: "https://www.electsumon.com/" },
     ],
   },
 ];

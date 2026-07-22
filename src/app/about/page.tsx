@@ -84,7 +84,7 @@ export default function AboutPage() {
           <AnimateOnScroll>
             <SectionHeader
               title="Experience"
-              intro="Professional roles and ventures — founding Gonimia, shipping CRA-compliant donor management at GlaceIT, and building education and corporate systems at Troyee Associates."
+              intro="Professional roles and ventures — founding Gonimia, shipping CRA-compliant donor management at GlaceIT, and building Troyee, ULSAI, and ElectSumon as IT Officer at Troyee Associates."
             />
           </AnimateOnScroll>
           <ExperienceList experiences={experiences} />
