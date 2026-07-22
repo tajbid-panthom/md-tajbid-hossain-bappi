@@ -229,6 +229,34 @@ export const testimonials = [
     title: "Lecturer",
     affiliation: "Khulna University",
   },
+  {
+    quote:
+      "Tajbid built Gonimia into a robust, scalable e-commerce platform that handles our multi-category catalog, payments, and delivery workflows with ease. His attention to performance and user experience has been instrumental to our growth.",
+    name: "Md Raian Khan",
+    title: "CEO",
+    affiliation: "Gonimia",
+  },
+  {
+    quote:
+      "Working with Tajbid on the Troyee platform was a seamless experience. He delivered a polished, responsive site that showcases our brand and products beautifully — exactly what we needed for our customers in Bangladesh.",
+    name: "Planner Fazle Reza Sumon",
+    title: "Chief Executive",
+    affiliation: "Troyee Associates",
+  },
+  {
+    quote:
+      "Tajbid developed our corporate website with a modern, professional design that reflects ULSAI's mission. He understood our requirements quickly and delivered a site we are proud to share with clients and partners.",
+    name: "Dr. Serajum Reza Munira",
+    title: "Director",
+    affiliation: "ULSAI",
+  },
+  {
+    quote:
+      "Tajbid brought DonorLog to life with a thoughtful, full-stack solution for donor management and reporting. His technical depth and commitment to our nonprofit workflows made him an invaluable partner from day one.",
+    name: "Rayhan Shikder",
+    title: "Founder",
+    affiliation: "DonorLog",
+  },
 ];
 
 export const siteConfig = {
